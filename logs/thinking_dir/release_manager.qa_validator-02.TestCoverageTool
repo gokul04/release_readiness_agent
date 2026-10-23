@@ -1,0 +1,45 @@
+Agent: release_manager.qa_validator-02.TestCoverageTool
+
+[AGENT] @ 2026-10-23 15:02:44:
+Received arguments:
+```json
+{
+    "tool_args": {
+        "coverage_threshold": null,
+        "origin": [
+            {
+                "instantiation_index": 1,
+                "tool": "release_manager"
+            },
+            {
+                "instantiation_index": 2,
+                "tool": "qa_validator"
+            },
+            {
+                "instantiation_index": 1,
+                "tool": "TestCoverageTool"
+            }
+        ],
+        "origin_str": "release_manager.qa_validator-02.TestCoverageTool",
+        "repo_path": "C:\\progs\\hackathon\\code_repo\\onlinebookstore"
+    },
+    "tool_start": true
+}
+```
+
+[AGENT] @ 2026-10-23 15:02:45:
+Got result:
+```json
+{
+    "tool_end": true,
+    "tool_error": false,
+    "tool_output": {
+        "coverage_percent": null,
+        "coverage_threshold": 80.0,
+        "meets_threshold": false,
+        "tests_failed": null,
+        "tests_passed": null,
+        "tests_skipped": null
+    }
+}
+```

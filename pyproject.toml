@@ -1,0 +1,20 @@
+[project]
+name = "release-readiness-agent"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Gokul Krishnan (Cognizant)", email = "Gokul.Krishnan@partner.bmwgroup.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "langchain-openrouter>=0.2.9",
+    "neuro-san-studio>=0.4.3",
+]
+
+[project.scripts]
+release-readiness-agent = "release_readiness_agent:main"
+
+[build-system]
+requires = ["uv_build>=0.13.0,<0.14.0"]
+build-backend = "uv_build"

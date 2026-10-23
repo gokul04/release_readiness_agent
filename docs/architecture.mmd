@@ -1,0 +1,33 @@
+flowchart TD
+    User["👤 Developer / CI Pipeline"] -->|"PR link or repo reference"| RM
+
+    subgraph NeuroSAN["Neuro SAN Agent Network: release_readiness"]
+        RM["🧑‍💼 Release Manager (Front Man)<br/>Kicks off parallel reviews<br/>Issues Go/No-Go report"]
+
+        RM -->|"review repo"| SA["🛡️ Security Auditor"]
+        RM -->|"review repo"| AC["🏛️ Architecture Concierge"]
+        RM -->|"review repo"| QA["✅ QA Validator"]
+
+        SA --> SST["🔧 SecretScannerTool (CodedTool)<br/>hardcoded secrets"]
+        SA --> VST["🔧 VulnerabilityScannerTool (CodedTool)<br/>package CVEs"]
+
+        AC --> ACT["🔧 ArchitectureComplianceTool (CodedTool)<br/>file tree vs. eng. guidelines"]
+
+        QA --> TCT["🔧 TestCoverageTool (CodedTool)<br/>coverage.xml / JUnit logs"]
+
+        SST -.->|findings| SA
+        VST -.->|findings| SA
+        ACT -.->|findings| AC
+        TCT -.->|findings| QA
+
+        SA -.->|security report| RM
+        AC -.->|architecture report| RM
+        QA -.->|QA/coverage report| RM
+    end
+
+    RM -->|"Go / No-Go / Go-with-conditions"| User
+
+    SST -.->|"optional"| RepoFS[("Repository file tree")]
+    VST -.->|"optional"| DepAPI[("Package vuln. DB / API")]
+    ACT -.->|"optional"| EngDocs[("Internal engineering docs")]
+    TCT -.->|"optional"| TestLogs[("CI test/coverage logs")]
