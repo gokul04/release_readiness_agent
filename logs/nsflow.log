@@ -11535,3 +11535,664 @@ INFO:     127.0.0.1:54690 - "GET /api/v1/connectivity/release_readiness HTTP/1.1
 2026-10-23 17:01:32 - release_readiness - INFO - Streaming chat finished for client: session_1792767517357_37de49bfb5359e
 2026-10-23 17:03:38 - root - INFO - network_name: release_readiness, agent_name: SecretScannerTool
 INFO:     127.0.0.1:54441 - "GET /api/v1/networkconfig/release_readiness/agent/SecretScannerTool HTTP/1.1" 200 OK
+INFO:     Will watch for changes in these directories: ['C:\\progs\\hackathon\\code_repo\\release_readiness_agent']
+INFO:     Uvicorn running on http://localhost:4173 (Press CTRL+C to quit)
+INFO:     Started reloader process [38672] using StatReload
+C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\jwt\api_jwt.py:149: InsecureKeyLengthWarning: The HMAC key is 14 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  return self._jws.encode(
+C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\pydub\utils.py:170: RuntimeWarning: Couldn't find ffmpeg or avconv - defaulting to ffmpeg, but may not work
+  warn("Couldn't find ffmpeg or avconv - defaulting to ffmpeg, but may not work", RuntimeWarning)
+2026-10-24 10:33:11 - root - INFO - frontend_dist_path: C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\nsflow\prebuilt_frontend\dist
+2026-10-24 10:33:11 - root - INFO - Serving frontend from: C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\nsflow\prebuilt_frontend\dist
+INFO:     Started server process [2212]
+INFO:     Waiting for application startup.
+2026-10-24 10:33:11 - root - INFO - FastAPI is starting up...
+2026-10-24 10:33:11 - root - INFO - Initializing NeuroSan config from environment variables...
+2026-10-24 10:33:11 - root - INFO - [Startup] Default NsConfig set to http://localhost:8080
+2026-10-24 10:33:11 - root - INFO - Initializing local database 'nss_local.db'...
+2026-10-24 10:33:11 - root - INFO - Local database 'nss_local.db' initialized
+INFO:     Application startup complete.
+INFO:     127.0.0.1:65066 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65066 - "GET /assets/index.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:51311 - "GET /assets/index.css HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:51311 - "GET /api/v1/vite_config.json HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51311 - "GET /api/v1/version/nsflow HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62166 - "GET /api/v1/ping HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65066 - "GET /api/v1/get_ns_config HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62166 - "GET /api/v1/ping HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65066 - "GET /api/v1/get_ns_config HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65066 - "GET /api/v1/version/neuro-san HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62166 - "GET /api/v1/version/nsflow HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51311 - "GET /api/v1/mcp/oauth/connections HTTP/1.1" 200 OK
+2026-10-24 10:33:26 - root - ERROR - Failed to retrieve concierge list: 503: NeuroSan server at localhost:8080 is not reachable
+INFO:     127.0.0.1:65066 - "GET /api/v1/list?connection_type=http&host=localhost&port=8080 HTTP/1.1" 500 Internal Server Error
+Traceback (most recent call last):
+INFO:     127.0.0.1:62166 - "GET /api/v1/version/neuro-san HTTP/1.1" 200 OK
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\nsflow\backend\api\v1\fastapi_concierge_endpoints.py", line 45, in get_concierge_list
+INFO:     127.0.0.1:59212 - "GET /api/v1/mcp/oauth/redirect_uri HTTP/1.1" 200 OK
+    result = await ns_concierge_utils.list_concierge(metadata)
+INFO:     127.0.0.1:65185 - "GET /api/v1/get_ns_config HTTP/1.1" 200 OK
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+INFO:     127.0.0.1:65185 - "GET /api/v1/get_ns_config HTTP/1.1" 200 OK
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\nsflow\backend\utils\agentutils\ns_concierge_utils.py", line 82, in list_concierge
+    raise HTTPException(
+        status_code=503, detail=f"NeuroSan server at {self.server_host}:{self.server_port} is not reachable"
+    )
+fastapi.exceptions.HTTPException: 503: NeuroSan server at localhost:8080 is not reachable
+INFO:     127.0.0.1:55876 - "POST /api/v1/set_ns_config HTTP/1.1" 200 OK
+2026-10-24 10:33:43 - root - ERROR - Failed to retrieve concierge list: 503: NeuroSan server at localhost:8080 is not reachable
+INFO:     127.0.0.1:55876 - "GET /api/v1/list?connection_type=http&host=localhost&port=8080 HTTP/1.1" 500 Internal Server Error
+Traceback (most recent call last):
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\nsflow\backend\api\v1\fastapi_concierge_endpoints.py", line 45, in get_concierge_list
+    result = await ns_concierge_utils.list_concierge(metadata)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\nsflow\backend\utils\agentutils\ns_concierge_utils.py", line 82, in list_concierge
+    raise HTTPException(
+        status_code=503, detail=f"NeuroSan server at {self.server_host}:{self.server_port} is not reachable"
+    )
+fastapi.exceptions.HTTPException: 503: NeuroSan server at localhost:8080 is not reachable
+INFO:     127.0.0.1:58449 - "POST /api/v1/set_ns_config HTTP/1.1" 200 OK
+2026-10-24 10:33:54 - httpx - INFO - HTTP Request: GET http://localhost:8080/api/v1/list "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:58449 - "GET /api/v1/list?connection_type=http&host=localhost&port=8080 HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+2026-10-24 10:33:59 - root - INFO - FastAPI is shutting down...
+INFO:     Application shutdown complete.
+INFO:     Finished server process [2212]
+INFO:     Stopping reloader process [38672]
+INFO:     Will watch for changes in these directories: ['C:\\progs\\hackathon\\code_repo\\release_readiness_agent']
+INFO:     Uvicorn running on http://localhost:4173 (Press CTRL+C to quit)
+INFO:     Started reloader process [13120] using StatReload
+C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\jwt\api_jwt.py:149: InsecureKeyLengthWarning: The HMAC key is 14 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  return self._jws.encode(
+C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\pydub\utils.py:170: RuntimeWarning: Couldn't find ffmpeg or avconv - defaulting to ffmpeg, but may not work
+  warn("Couldn't find ffmpeg or avconv - defaulting to ffmpeg, but may not work", RuntimeWarning)
+2026-10-24 11:14:52 - root - INFO - frontend_dist_path: C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\nsflow\prebuilt_frontend\dist
+2026-10-24 11:14:52 - root - INFO - Serving frontend from: C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\nsflow\prebuilt_frontend\dist
+INFO:     Started server process [9580]
+INFO:     Waiting for application startup.
+2026-10-24 11:14:52 - root - INFO - FastAPI is starting up...
+2026-10-24 11:14:52 - root - INFO - Initializing NeuroSan config from environment variables...
+2026-10-24 11:14:52 - root - INFO - [Startup] Default NsConfig set to http://localhost:8080
+2026-10-24 11:14:52 - root - INFO - Initializing local database 'nss_local.db'...
+2026-10-24 11:14:52 - root - INFO - Local database 'nss_local.db' initialized
+INFO:     Application startup complete.
+INFO:     127.0.0.1:55879 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55879 - "GET /api/v1/vite_config.json HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55879 - "GET /api/v1/version/nsflow HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57795 - "GET /api/v1/ping HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64011 - "GET /api/v1/get_ns_config HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57795 - "GET /api/v1/ping HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64011 - "GET /api/v1/get_ns_config HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64011 - "GET /api/v1/version/nsflow HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55879 - "GET /api/v1/mcp/oauth/redirect_uri HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57795 - "GET /api/v1/mcp/oauth/connections HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64011 - "GET /api/v1/version/neuro-san HTTP/1.1" 200 OK
+2026-10-24 11:15:04 - root - ERROR - Failed to retrieve concierge list: 503: NeuroSan server at localhost:8080 is not reachable
+INFO:     127.0.0.1:60780 - "GET /api/v1/list?connection_type=http&host=localhost&port=8080 HTTP/1.1" 500 Internal Server Error
+Traceback (most recent call last):
+INFO:     127.0.0.1:64011 - "GET /api/v1/version/neuro-san HTTP/1.1" 200 OK
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\nsflow\backend\api\v1\fastapi_concierge_endpoints.py", line 45, in get_concierge_list
+INFO:     127.0.0.1:56374 - "GET /api/v1/get_ns_config HTTP/1.1" 200 OK
+    result = await ns_concierge_utils.list_concierge(metadata)
+INFO:     127.0.0.1:56374 - "GET /api/v1/get_ns_config HTTP/1.1" 200 OK
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\nsflow\backend\utils\agentutils\ns_concierge_utils.py", line 82, in list_concierge
+    raise HTTPException(
+        status_code=503, detail=f"NeuroSan server at {self.server_host}:{self.server_port} is not reachable"
+    )
+fastapi.exceptions.HTTPException: 503: NeuroSan server at localhost:8080 is not reachable
+INFO:     127.0.0.1:56374 - "POST /api/v1/set_ns_config HTTP/1.1" 200 OK
+2026-10-24 11:15:10 - root - ERROR - Failed to retrieve concierge list: 503: NeuroSan server at localhost:8080 is not reachable
+INFO:     127.0.0.1:56374 - "GET /api/v1/list?connection_type=http&host=localhost&port=8080 HTTP/1.1" 500 Internal Server Error
+Traceback (most recent call last):
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\nsflow\backend\api\v1\fastapi_concierge_endpoints.py", line 45, in get_concierge_list
+    result = await ns_concierge_utils.list_concierge(metadata)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\nsflow\backend\utils\agentutils\ns_concierge_utils.py", line 82, in list_concierge
+    raise HTTPException(
+        status_code=503, detail=f"NeuroSan server at {self.server_host}:{self.server_port} is not reachable"
+    )
+fastapi.exceptions.HTTPException: 503: NeuroSan server at localhost:8080 is not reachable
+INFO:     127.0.0.1:56374 - "POST /api/v1/set_ns_config HTTP/1.1" 200 OK
+2026-10-24 11:15:15 - root - ERROR - Failed to retrieve concierge list: 503: NeuroSan server at localhost:8080 is not reachable
+INFO:     127.0.0.1:56374 - "GET /api/v1/list?connection_type=http&host=localhost&port=8080 HTTP/1.1" 500 Internal Server Error
+Traceback (most recent call last):
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\nsflow\backend\api\v1\fastapi_concierge_endpoints.py", line 45, in get_concierge_list
+    result = await ns_concierge_utils.list_concierge(metadata)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\nsflow\backend\utils\agentutils\ns_concierge_utils.py", line 82, in list_concierge
+    raise HTTPException(
+        status_code=503, detail=f"NeuroSan server at {self.server_host}:{self.server_port} is not reachable"
+    )
+fastapi.exceptions.HTTPException: 503: NeuroSan server at localhost:8080 is not reachable
+INFO:     127.0.0.1:57725 - "POST /api/v1/set_ns_config HTTP/1.1" 200 OK
+2026-10-24 11:15:27 - root - ERROR - Failed to retrieve concierge list: 503: NeuroSan server at localhost:8080 is not reachable
+INFO:     127.0.0.1:57725 - "GET /api/v1/list?connection_type=http&host=localhost&port=8080 HTTP/1.1" 500 Internal Server Error
+Traceback (most recent call last):
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\nsflow\backend\api\v1\fastapi_concierge_endpoints.py", line 45, in get_concierge_list
+    result = await ns_concierge_utils.list_concierge(metadata)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\nsflow\backend\utils\agentutils\ns_concierge_utils.py", line 82, in list_concierge
+    raise HTTPException(
+        status_code=503, detail=f"NeuroSan server at {self.server_host}:{self.server_port} is not reachable"
+    )
+fastapi.exceptions.HTTPException: 503: NeuroSan server at localhost:8080 is not reachable
+INFO:     127.0.0.1:52130 - "POST /api/v1/set_ns_config HTTP/1.1" 200 OK
+2026-10-24 11:15:36 - httpx - INFO - HTTP Request: GET http://localhost:8080/api/v1/list "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:52130 - "GET /api/v1/list?connection_type=http&host=localhost&port=8080 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58583 - "WebSocket /api/v1/ws/logs/release_readiness/session_1792833301795_82ed98de554721" [accepted]
+INFO:     connection open
+2026-10-24 11:15:39 - release_readiness - INFO - New logs client connected
+2026-10-24 11:15:39 - root - INFO - Using thinking file: C:\tmp\agent_thinking.txt
+2026-10-24 11:15:39 - root - INFO - Using thinking dir: C:\progs\hackathon\code_repo\release_readiness_agent\logs\thinking_dir
+2026-10-24 11:15:39 - root - INFO - Created agent session for agent: http://localhost:8080/api/v1/release_readiness/http
+INFO:     127.0.0.1:59428 - "GET /api/v1/connectivity/release_readiness HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52130 - "GET /api/v1/mcp/oauth/required/release_readiness HTTP/1.1" 200 OK
+2026-10-24 11:15:43 - root - INFO - Using thinking file: C:\tmp\agent_thinking.txt
+2026-10-24 11:15:43 - root - INFO - Using thinking dir: C:\progs\hackathon\code_repo\release_readiness_agent\logs\thinking_dir
+2026-10-24 11:15:43 - root - INFO - Created agent session for agent: http://localhost:8080/api/v1/release_readiness/http
+INFO:     127.0.0.1:59428 - "GET /api/v1/connectivity/release_readiness HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60279 - "WebSocket /api/v1/ws/logs/release_readiness/session_1792833301795_82ed98de554721" [accepted]
+INFO:     connection open
+2026-10-24 11:15:43 - root - INFO - Using thinking file: C:\tmp\agent_thinking.txt
+2026-10-24 11:15:43 - root - INFO - Using thinking dir: C:\progs\hackathon\code_repo\release_readiness_agent\logs\thinking_dir
+2026-10-24 11:15:43 - root - INFO - Created agent session for agent: http://localhost:8080/api/v1/release_readiness/http
+INFO:     127.0.0.1:55643 - "WebSocket /api/v1/ws/chat/release_readiness/session_1792833301795_82ed98de554721" [accepted]
+INFO:     connection open
+2026-10-24 11:15:43 - release_readiness - INFO - Chat client session_1792833301795_82ed98de554721 connected to agent: release_readiness
+INFO:     127.0.0.1:54557 - "WebSocket /api/v1/ws/internalchat/release_readiness/session_1792833301795_82ed98de554721" [accepted]
+INFO:     connection open
+2026-10-24 11:15:43 - release_readiness - INFO - Internal chat connected: release_readiness
+INFO:     127.0.0.1:50795 - "WebSocket /api/v1/ws/progress/release_readiness/session_1792833301795_82ed98de554721" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:53774 - "WebSocket /api/v1/ws/slydata/release_readiness/session_1792833301795_82ed98de554721" [accepted]
+INFO:     127.0.0.1:58506 - "GET /api/v1/networkconfig/release_readiness HTTP/1.1" 200 OK
+INFO:     connection open
+2026-10-24 11:15:47 - root - INFO - network_name: release_readiness, agent_name: release_manager
+INFO:     127.0.0.1:58506 - "GET /api/v1/networkconfig/release_readiness/agent/release_manager HTTP/1.1" 200 OK
+2026-10-24 11:16:13 - root - INFO - network_name: release_readiness, agent_name: architecture_concierge
+INFO:     127.0.0.1:52657 - "GET /api/v1/networkconfig/release_readiness/agent/architecture_concierge HTTP/1.1" 200 OK
+2026-10-24 11:16:14 - root - INFO - network_name: release_readiness, agent_name: qa_validator
+INFO:     127.0.0.1:52657 - "GET /api/v1/networkconfig/release_readiness/agent/qa_validator HTTP/1.1" 200 OK
+2026-10-24 11:16:15 - root - INFO - network_name: release_readiness, agent_name: security_auditor
+INFO:     127.0.0.1:52657 - "GET /api/v1/networkconfig/release_readiness/agent/security_auditor HTTP/1.1" 200 OK
+2026-10-24 11:16:30 - root - INFO - network_name: release_readiness, agent_name: SecretScannerTool
+INFO:     127.0.0.1:59129 - "GET /api/v1/networkconfig/release_readiness/agent/SecretScannerTool HTTP/1.1" 200 OK
+2026-10-24 11:20:09 - release_readiness - INFO - chat_context received: {}
+2026-10-24 11:20:20 - release_readiness - INFO - {"otrace": ["release_manager"]}
+2026-10-24 11:20:20 - release_readiness - INFO - {'otrace': ['release_manager'], 'text': 'Invoking: `security_auditor` with:\n{"invoking_start": true, "invoked_agent_name": "security_auditor", "params": {"inquiry": "Check the pull request https://github.com/gokul04/onlinebookstore/pull/1 and the local repository checked out at C:\\\\progs\\\\hackathon\\\\code_repo\\\\onlinebookstore for security issues, including hardcoded secrets, vulnerable package dependencies, and OWASP compliance issues.", "mode": "Fulfill"}}'}
+2026-10-24 11:20:22 - release_readiness - INFO - {'otrace': ['release_manager'], 'text': 'Invoking: `architecture_concierge` with:\n{"invoking_start": true, "invoked_agent_name": "architecture_concierge", "params": {"inquiry": "Check the pull request https://github.com/gokul04/onlinebookstore/pull/1 and the local repository checked out at C:\\\\progs\\\\hackathon\\\\code_repo\\\\onlinebookstore for architecture compliance issues against internal engineering documentation guidelines.", "mode": "Fulfill"}}'}
+2026-10-24 11:20:24 - release_readiness - INFO - {'otrace': ['release_manager'], 'text': 'Invoking: `qa_validator` with:\n{"invoking_start": true, "invoked_agent_name": "qa_validator", "params": {"inquiry": "Check the pull request https://github.com/gokul04/onlinebookstore/pull/1 and the local repository checked out at C:\\\\progs\\\\hackathon\\\\code_repo\\\\onlinebookstore for test coverage and QA readiness, including verifying code coverage thresholds and test health.", "mode": "Fulfill"}}'}
+2026-10-24 11:20:29 - release_readiness - INFO - {"otrace": ["release_manager", "qa_validator"]}
+2026-10-24 11:20:29 - release_readiness - INFO - {'otrace': ['release_manager', 'qa_validator'], 'text': 'Invoking: `TestCoverageTool` with:\n{"invoking_start": true, "invoked_agent_name": "TestCoverageTool", "params": {"repo_path": "C:\\\\progs\\\\hackathon\\\\code_repo\\\\onlinebookstore"}}'}
+2026-10-24 11:20:30 - release_readiness - INFO - {"otrace": ["release_manager", "qa_validator", "TestCoverageTool"]}
+2026-10-24 11:20:30 - release_readiness - INFO - {'otrace': ['release_manager', 'qa_validator', 'TestCoverageTool'], 'text': 'Received arguments:\n{"tool_start": true, "tool_args": {"repo_path": "C:\\\\progs\\\\hackathon\\\\code_repo\\\\onlinebookstore", "coverage_threshold": null, "origin": [{"tool": "release_manager", "instantiation_index": 1}, {"tool": "qa_validator", "instantiation_index": 1}, {"tool": "TestCoverageTool", "instantiation_index": 1}], "origin_str": "release_manager.qa_validator.TestCoverageTool"}}'}
+2026-10-24 11:20:30 - release_readiness - INFO - {"otrace": ["release_manager", "architecture_concierge"]}
+2026-10-24 11:20:30 - release_readiness - INFO - {'otrace': ['release_manager', 'architecture_concierge'], 'text': 'Invoking: `ArchitectureComplianceTool` with:\n{"invoking_start": true, "invoked_agent_name": "ArchitectureComplianceTool", "params": {"repo_path": "C:\\\\progs\\\\hackathon\\\\code_repo\\\\onlinebookstore"}}'}
+2026-10-24 11:20:30 - release_readiness - INFO - {"otrace": ["release_manager", "architecture_concierge", "ArchitectureComplianceTool"]}
+2026-10-24 11:20:30 - release_readiness - INFO - {'otrace': ['release_manager', 'architecture_concierge', 'ArchitectureComplianceTool'], 'text': 'Received arguments:\n{"tool_start": true, "tool_args": {"repo_path": "C:\\\\progs\\\\hackathon\\\\code_repo\\\\onlinebookstore", "origin": [{"tool": "release_manager", "instantiation_index": 1}, {"tool": "architecture_concierge", "instantiation_index": 1}, {"tool": "ArchitectureComplianceTool", "instantiation_index": 1}], "origin_str": "release_manager.architecture_concierge.ArchitectureComplianceTool"}}'}
+2026-10-24 11:20:30 - release_readiness - INFO - {'otrace': ['release_manager', 'architecture_concierge', 'ArchitectureComplianceTool'], 'text': 'Got result:\n{"tool_end": true, "tool_error": false, "tool_output": {"top_level_entries": [".classpath", ".git", ".github", ".gitignore", ".project", ".settings", "CODE_OF_CONDUCT.md", "CONTRIBUTING.md", "Dummy_Database.md", "Jenkinsfile", "Procfile", "README.md", "WebContent", "appspec.yaml", "buildspec.yaml", "pom.xml", "scripts", "setup", "src", "target"], "hard_violations": [{"severity": "high", "type": "missing_required_path", "path": "tests"}], "soft_recommendations": [{"severity": "low", "type": "missing_recommended_path", "path": "CHANGELOG.md"}, {"severity": "low", "type": "missing_recommended_path", "path": "docs"}], "compliant": false}}'}
+2026-10-24 11:20:30 - release_readiness - INFO - {"otrace": ["release_manager", "architecture_concierge"]}
+2026-10-24 11:20:30 - release_readiness - INFO - {'otrace': ['release_manager', 'architecture_concierge'], 'text': "result from ArchitectureComplianceTool\n{'top_level_entries': ['.classpath', '.git', '.github', '.gitignore', '.project', '.settings', 'CODE_OF_CONDUCT.md', 'CONTRIBUTING.md', 'Dummy_Database.md', 'Jenkinsfile', 'Procfile', 'README.md', 'WebContent', 'appspec.yaml', 'buildspec.yaml', 'pom.xml', 'scripts', 'setup', 'src', 'target'], 'hard_violations': [{'severity': 'high', 'type': 'missing_required_path', 'path': 'tests'}], 'soft_recommendations': [{'severity': 'low', 'type': 'missing_recommended_path', 'path': 'CHANGELOG.md'}, {'severity': 'low', 'type': 'missing_recommended_path', 'path': 'docs'}], 'compliant': False}"}
+2026-10-24 11:20:32 - release_readiness - INFO - {"otrace": ["release_manager", "qa_validator", "TestCoverageTool"]}
+2026-10-24 11:20:32 - release_readiness - INFO - {'otrace': ['release_manager', 'qa_validator', 'TestCoverageTool'], 'text': 'Got result:\n{"tool_end": true, "tool_error": false, "tool_output": {"coverage_percent": 94.53, "coverage_threshold": 80.0, "meets_threshold": true, "tests_passed": 91, "tests_failed": 0, "tests_skipped": 0}}'}
+2026-10-24 11:20:32 - release_readiness - INFO - {"otrace": ["release_manager", "qa_validator"]}
+2026-10-24 11:20:32 - release_readiness - INFO - {'otrace': ['release_manager', 'qa_validator'], 'text': "result from TestCoverageTool\n{'coverage_percent': 94.53, 'coverage_threshold': 80.0, 'meets_threshold': True, 'tests_passed': 91, 'tests_failed': 0, 'tests_skipped': 0}"}
+2026-10-24 11:20:33 - release_readiness - INFO - {"otrace": ["release_manager", "architecture_concierge"]}
+2026-10-24 11:20:33 - release_readiness - INFO - {'otrace': ['release_manager', 'architecture_concierge'], 'text': 'Invoking: `ArchitectureComplianceTool` with:\n{"invoking_start": true, "invoked_agent_name": "ArchitectureComplianceTool", "params": {"repo_path": "C:\\\\progs\\\\hackathon\\\\code_repo\\\\onlinebookstore"}}'}
+2026-10-24 11:20:33 - release_readiness - INFO - {"otrace": ["release_manager", "architecture_concierge", "ArchitectureComplianceTool"]}
+2026-10-24 11:20:33 - release_readiness - INFO - {'otrace': ['release_manager', 'architecture_concierge', 'ArchitectureComplianceTool'], 'text': 'Received arguments:\n{"tool_start": true, "tool_args": {"repo_path": "C:\\\\progs\\\\hackathon\\\\code_repo\\\\onlinebookstore", "origin": [{"tool": "release_manager", "instantiation_index": 1}, {"tool": "architecture_concierge", "instantiation_index": 1}, {"tool": "ArchitectureComplianceTool", "instantiation_index": 2}], "origin_str": "release_manager.architecture_concierge.ArchitectureComplianceTool-02"}}'}
+2026-10-24 11:20:33 - release_readiness - INFO - {'otrace': ['release_manager', 'architecture_concierge', 'ArchitectureComplianceTool'], 'text': 'Got result:\n{"tool_end": true, "tool_error": false, "tool_output": {"top_level_entries": [".classpath", ".git", ".github", ".gitignore", ".project", ".settings", "CODE_OF_CONDUCT.md", "CONTRIBUTING.md", "Dummy_Database.md", "Jenkinsfile", "Procfile", "README.md", "WebContent", "appspec.yaml", "buildspec.yaml", "pom.xml", "scripts", "setup", "src", "target"], "hard_violations": [{"severity": "high", "type": "missing_required_path", "path": "tests"}], "soft_recommendations": [{"severity": "low", "type": "missing_recommended_path", "path": "CHANGELOG.md"}, {"severity": "low", "type": "missing_recommended_path", "path": "docs"}], "compliant": false}}'}
+2026-10-24 11:20:33 - release_readiness - INFO - {"otrace": ["release_manager", "architecture_concierge"]}
+2026-10-24 11:20:33 - release_readiness - INFO - {'otrace': ['release_manager', 'architecture_concierge'], 'text': "result from ArchitectureComplianceTool\n{'top_level_entries': ['.classpath', '.git', '.github', '.gitignore', '.project', '.settings', 'CODE_OF_CONDUCT.md', 'CONTRIBUTING.md', 'Dummy_Database.md', 'Jenkinsfile', 'Procfile', 'README.md', 'WebContent', 'appspec.yaml', 'buildspec.yaml', 'pom.xml', 'scripts', 'setup', 'src', 'target'], 'hard_violations': [{'severity': 'high', 'type': 'missing_required_path', 'path': 'tests'}], 'soft_recommendations': [{'severity': 'low', 'type': 'missing_recommended_path', 'path': 'CHANGELOG.md'}, {'severity': 'low', 'type': 'missing_recommended_path', 'path': 'docs'}], 'compliant': False}"}
+2026-10-24 11:20:37 - release_readiness - INFO - {"otrace": ["release_manager", "qa_validator"]}
+2026-10-24 11:20:37 - release_readiness - INFO - {'otrace': ['release_manager', 'qa_validator'], 'text': None}
+2026-10-24 11:20:37 - release_readiness - INFO - {'otrace': ['release_manager', 'qa_validator'], 'text': ''}
+2026-10-24 11:20:37 - release_readiness - INFO - {"otrace": ["release_manager"]}
+2026-10-24 11:20:37 - release_readiness - INFO - {'otrace': ['release_manager'], 'text': 'result from qa_validator\n{\n  "Name": "QA Validator",\n  "Inquiry": "Check the pull request https://github.com/gokul04/onlinebookstore/pull/1 and the local repository checked out at C:\\\\progs\\\\hackathon\\\\code_repo\\\\onlinebookstore for test coverage and QA readiness, including verifying code coverage thresholds and test health.",\n  "Mode": "Fulfill",\n  "Response": "Test coverage and QA readiness assessment for the local repository at C:\\\\progs\\\\hackathon\\\\code_repo\\\\onlinebookstore:\\n\\n- Overall line coverage: 94.53%\\n- Required coverage threshold: 80%\\n- Coverage meets threshold: Yes\\n- Tests passed: 91\\n- Tests failed: 0\\n- Tests skipped: 0\\n- Flaky tests: None reported\\n\\nQA readiness: The repository shows strong test health with no failing or skipped tests and code coverage well above the required threshold. Based on the local checkout, the codebase appears ready for QA sign-off from a coverage and test-passing perspective.\\n\\nNote: I cannot directly inspect the GitHub pull request (https://github.com/gokul04/onlinebookstore/pull/1) via this tool; the analysis above reflects the state of the locally checked-out repository."\n}'}
+2026-10-24 11:20:39 - release_readiness - INFO - {"otrace": ["release_manager", "security_auditor"]}
+2026-10-24 11:20:39 - release_readiness - INFO - {'otrace': ['release_manager', 'security_auditor'], 'text': 'Invoking: `SecretScannerTool` with:\n{"invoking_start": true, "invoked_agent_name": "SecretScannerTool", "params": {"repo_path": "C:\\\\progs\\\\hackathon\\\\code_repo\\\\onlinebookstore"}}'}
+2026-10-24 11:20:39 - release_readiness - INFO - {"otrace": ["release_manager", "security_auditor", "SecretScannerTool"]}
+2026-10-24 11:20:39 - release_readiness - INFO - {'otrace': ['release_manager', 'security_auditor', 'SecretScannerTool'], 'text': 'Received arguments:\n{"tool_start": true, "tool_args": {"repo_path": "C:\\\\progs\\\\hackathon\\\\code_repo\\\\onlinebookstore", "origin": [{"tool": "release_manager", "instantiation_index": 1}, {"tool": "security_auditor", "instantiation_index": 1}, {"tool": "SecretScannerTool", "instantiation_index": 1}], "origin_str": "release_manager.security_auditor.SecretScannerTool"}}'}
+2026-10-24 11:20:39 - release_readiness - INFO - {"otrace": ["release_manager", "security_auditor"]}
+2026-10-24 11:20:39 - release_readiness - INFO - {'otrace': ['release_manager', 'security_auditor'], 'text': 'Invoking: `VulnerabilityScannerTool` with:\n{"invoking_start": true, "invoked_agent_name": "VulnerabilityScannerTool", "params": {"repo_path": "C:\\\\progs\\\\hackathon\\\\code_repo\\\\onlinebookstore"}}'}
+2026-10-24 11:20:39 - release_readiness - INFO - {"otrace": ["release_manager", "security_auditor", "VulnerabilityScannerTool"]}
+2026-10-24 11:20:39 - release_readiness - INFO - {'otrace': ['release_manager', 'security_auditor', 'VulnerabilityScannerTool'], 'text': 'Received arguments:\n{"tool_start": true, "tool_args": {"repo_path": "C:\\\\progs\\\\hackathon\\\\code_repo\\\\onlinebookstore", "origin": [{"tool": "release_manager", "instantiation_index": 1}, {"tool": "security_auditor", "instantiation_index": 1}, {"tool": "VulnerabilityScannerTool", "instantiation_index": 1}], "origin_str": "release_manager.security_auditor.VulnerabilityScannerTool"}}'}
+2026-10-24 11:20:39 - release_readiness - INFO - {'otrace': ['release_manager', 'security_auditor', 'VulnerabilityScannerTool'], 'text': 'Got result:\n{"tool_end": true, "tool_error": false, "tool_output": {"manifests_found": ["pom.xml"], "findings_count": 0, "findings": [], "owasp_category": "A06:2021 - Vulnerable and Outdated Components"}}'}
+2026-10-24 11:20:39 - release_readiness - INFO - {"otrace": ["release_manager", "security_auditor"]}
+2026-10-24 11:20:39 - release_readiness - INFO - {'otrace': ['release_manager', 'security_auditor'], 'text': "result from VulnerabilityScannerTool\n{'manifests_found': ['pom.xml'], 'findings_count': 0, 'findings': [], 'owasp_category': 'A06:2021 - Vulnerable and Outdated Components'}"}
+2026-10-24 11:20:43 - release_readiness - INFO - {"otrace": ["release_manager", "security_auditor", "SecretScannerTool"]}
+2026-10-24 11:20:43 - release_readiness - INFO - {'otrace': ['release_manager', 'security_auditor', 'SecretScannerTool'], 'text': 'Got result:\n{"tool_end": true, "tool_error": false, "tool_output": {"files_scanned": 75, "findings_count": 1, "findings": [{"severity": "high", "rule": "Hardcoded Password", "file": "src\\\\main\\\\java\\\\com\\\\bittercode\\\\util\\\\DatabaseConfig.java", "line": 27}], "owasp_category": "A02:2021 - Cryptographic Failures / A07:2021 - Identification and Authentication Failures"}}'}
+2026-10-24 11:20:43 - release_readiness - INFO - {"otrace": ["release_manager", "security_auditor"]}
+2026-10-24 11:20:43 - release_readiness - INFO - {'otrace': ['release_manager', 'security_auditor'], 'text': "result from SecretScannerTool\n{'files_scanned': 75, 'findings_count': 1, 'findings': [{'severity': 'high', 'rule': 'Hardcoded Password', 'file': 'src\\\\main\\\\java\\\\com\\\\bittercode\\\\util\\\\DatabaseConfig.java', 'line': 27}], 'owasp_category': 'A02:2021 - Cryptographic Failures / A07:2021 - Identification and Authentication Failures'}"}
+2026-10-24 11:20:47 - release_readiness - INFO - {"otrace": ["release_manager", "architecture_concierge"]}
+2026-10-24 11:20:47 - release_readiness - INFO - {'otrace': ['release_manager', 'architecture_concierge'], 'text': None}
+2026-10-24 11:20:47 - release_readiness - INFO - {'otrace': ['release_manager', 'architecture_concierge'], 'text': ''}
+2026-10-24 11:20:47 - release_readiness - INFO - {"otrace": ["release_manager"]}
+2026-10-24 11:20:47 - release_readiness - INFO - {'otrace': ['release_manager'], 'text': 'result from architecture_concierge\n**Response**\n\nI’ve run the **ArchitectureComplianceTool** against the checked\u2011out local repository at  \n`C:\\progs\\hackathon\\code_repo\\onlinebookstore`.  \nThe tool compares the file\u2011tree against the internal engineering structure guidelines and returns the following findings:\n\n| Category | Details |\n|----------|---------|\n| **Hard violations (blocking)** | • **Missing required path `tests`** – severity *high*. The project does not contain a `tests` directory, which is required by the guidelines. This blocks a compliant status. |\n| **Soft recommendations (non\u2011blocking)** | • **Missing recommended path `CHANGELOG.md`** – severity *low*. <br>• **Missing recommended path `docs`** – severity *low*. These are advisable but not required for compliance. |\n| **Overall compliance** | `false` – the repository does **not** meet the full set of engineering structure guidelines because of the hard violation above. |\n\n---\n\n**What about the Pull Request?**  \nThe ArchitectureComplianceTool can only analyse the local file\u2011system snapshot it is given; it cannot fetch or diff a remote pull request (https://github.com/gokul04/onlinebookstore/pull/1). Consequently, I can’t directly inspect the PR’s changes. The baseline compliance of the repository is as reported above. Any changes introduced by PR\u202f#1 could potentially:\n\n* Resolve the missing `tests` directory (hard violation).  \n* Add or improve a `CHANGELOG.md` or `docs` folder (soft recommendations).  \n* Introduce additional structure that either helps or hurts compliance.\n\nIf you need a deeper dive into the PR’s diff, you’ll have to examine the PR on GitHub or pull the PR branch into the local repo and re\u2011run the compliance check.\n\n---\n\n**JSON block (mode = Fulfill)**  \n\n```json\n{\n  "Name": "Architecture Concierge",\n  "Inquiry": "Check the pull request https://github.com/gokul04/onlinebookstore/pull/1 and the local repository checked out at C:\\\\progs\\\\hackathon\\\\code_repo\\\\onlinebookstore for architecture compliance issues against internal engineering documentation guidelines.",\n  "Mode": "Fulfill",\n  "Response": "Hard violation: missing required \'tests\' directory (high severity, blocking). Soft recommendations: missing \'CHANGELOG.md\' and \'docs\' directories (low severity, non\u2011blocking). Overall compliance: false. The PR cannot be directly assessed via the tool; the baseline compliance of the local repo is as reported. Any PR changes may affect these findings."\n}\n```'}
+2026-10-24 11:20:48 - release_readiness - INFO - {"otrace": ["release_manager", "security_auditor"]}
+2026-10-24 11:20:48 - release_readiness - INFO - {'otrace': ['release_manager', 'security_auditor'], 'text': None}
+2026-10-24 11:20:48 - release_readiness - INFO - {'otrace': ['release_manager', 'security_auditor'], 'text': ''}
+2026-10-24 11:20:48 - release_readiness - INFO - {"otrace": ["release_manager"]}
+2026-10-24 11:20:48 - release_readiness - INFO - {'otrace': ['release_manager'], 'text': 'result from security_auditor\nBased on my security scanning of the local repository at `C:\\progs\\hackathon\\code_repo\\onlinebookstore`, here are the security findings:\n\n## Security Scan Results\n\n### Critical/High Severity Findings:\n1. **HIGH** - Hardcoded Password\n   - **File**: `src\\main\\java\\com\\bittercode\\util\\DatabaseConfig.java`\n   - **Line**: 27\n   - **OWASP Categories**: \n     - A02:2021 - Cryptographic Failures\n     - A07:2021 - Identification and Authentication Failures\n\n### Medium/Low Severity Findings:\n**No additional vulnerabilities found** in the dependency analysis.\n\n## OWASP Top 10 Categories Implicated:\n\n1. **A02:2021 - Cryptographic Failures**: The hardcoded password in DatabaseConfig.java represents a cryptographic failure where sensitive credentials are stored in plain text.\n\n2. **A07:2021 - Identification and Authentication Failures**: The hardcoded password also falls under authentication failures, as credentials are embedded directly in source code.\n\n3. **A06:2021 - Vulnerable and Outdated Components**: While no specific vulnerable dependencies were found in the pom.xml manifest, this category was checked as part of the comprehensive security scan.\n\n## Summary:\n- **Total Files Scanned**: 75\n- **Security Issues Found**: 1 (HIGH severity)\n- **Vulnerable Dependencies Found**: 0\n- **OWASP Compliance**: Partial - One critical issue remains that requires immediate attention\n\n## Recommendations:\n1. **Immediate Action Required**: Remove the hardcoded password from `DatabaseConfig.java` and implement a proper secrets management solution (environment variables, configuration files, or secret management services).\n2. **Dependency Management**: Continue monitoring the pom.xml for any future dependency updates that could introduce vulnerabilities.\n3. **Pull Request Review**: Since I cannot directly scan the pull request at https://github.com/gokul04/onlinebookstore/pull/1, I recommend manually reviewing the PR for any changes related to the DatabaseConfig.java file or dependency updates.\n\n**Note**: The pull request URL provided could not be scanned directly through available tools. Please manually review the PR for any security changes or new vulnerabilities introduced in the code changes.'}
+2026-10-24 11:20:55 - release_readiness - INFO - {'otrace': ['release_manager'], 'text': None}
+2026-10-24 11:20:55 - release_readiness - INFO - {'otrace': ['release_manager'], 'text': ''}
+2026-10-24 11:20:55 - release_readiness - INFO - {"otrace": ["release_manager"]}
+2026-10-24 11:20:55 - release_readiness - INFO - {'otrace': ['release_manager'], 'text': ''}
+2026-10-24 11:20:55 - release_readiness - INFO - Streaming response sent: {"message": {"type": "AI", "text": "# Go/No-Go Readiness Report\n\n**Pull Request:** https://github.com/gokul04/onlinebookstore/pull/1  \n**Repository:** C:\\progs\\hackathon\\code_repo\\onlinebookstore  \n**Overall Verdict: NO-GO**\n\n---\n\n## Security Findings\n\nA security scan was performed on the local repository. The following issues were identified:\n\n**Critical/High Severity:**\n1. **HIGH** - Hardcoded Password\n   - **File:** `src\\main\\java\\com\\bittercode\\util\\DatabaseConfig.java`\n   - **Line:** 27\n   - **OWASP Categories:** A02:2021 (Cryptographic Failures), A07:2021 (Identification and Authentication Failures)\n   - **Description:** Sensitive credentials stored in plain text directly in source code.\n\n**Medium/Low Severity:** None found.\n\n**Summary:**\n- Files scanned: 75\n- Security issues found: 1 (HIGH severity)\n- Vulnerable dependencies found: 0\n\n---\n\n## Architecture Findings\n\nThe repository structure was compared against internal engineering guidelines.\n\n**Hard Violations (Blocking):**\n1. **Missing required `tests` directory** \u2013 severity *high*. The project does not contain a `tests` directory, which is required by the guidelines.\n\n**Soft Recommendations (Non-blocking):**\n1. Missing recommended `CHANGELOG.md` \u2013 severity *low*\n2. Missing recommended `docs` directory \u2013 severity *low*\n\n**Overall Compliance:** false\n\n---\n\n## QA / Test Coverage Findings\n\nTest coverage and test health were verified on the local repository.\n\n- Overall line coverage: **94.53%**\n- Required coverage threshold: **80%**\n- Coverage meets threshold: **Yes**\n- Tests passed: **91**\n- Tests failed: **0**\n- Tests skipped: **0**\n- Flaky tests: None reported\n\n**QA readiness:** Ready from a coverage and test-passing perspective.\n\n---\n\n## Blocking Issues (Must Fix Before Release)\n\n1. **Security:** Remove the hardcoded password from `src\\main\\java\\com\\bittercode\\util\\DatabaseConfig.java` (line 27) and implement proper secrets management (environment variables, configuration files, or a secrets management service).\n2. **Architecture:** Add the required `tests` directory to satisfy engineering structure guidelines.\n\n---\n\n## Non-Blocking Recommendations\n\n1. Add a `CHANGELOG.md` file to document release changes.\n2. Add a `docs` directory for project documentation.\n3. Continue monitoring `pom.xml` for dependency updates that could introduce vulnerabilities in the future.\n\n---\n\n**Final Decision:** NO-GO \u2014 The release is blocked by one high-severity security vulnerability (hardcoded password) and one hard architecture violation (missing `tests` directory). These must be resolved before the PR can be merged into a release."}}
+2026-10-24 11:20:55 - release_readiness - INFO - Streaming chat finished for client: session_1792833301795_82ed98de554721
+2026-10-24 11:23:30 - root - INFO - network_name: release_readiness, agent_name: security_auditor
+INFO:     127.0.0.1:58368 - "GET /api/v1/networkconfig/release_readiness/agent/security_auditor HTTP/1.1" 200 OK
+INFO:     Shutting down
+2026-10-24 11:26:22 - release_readiness - INFO - WebSocket chat client disconnected: session_1792833301795_82ed98de554721
+INFO:     Waiting for background tasks to complete. (CTRL+C to force quit)
+INFO:     Finished server process [9580]
+2026-10-24 11:26:24 - root - INFO - FastAPI is shutting down...
+ERROR:    Traceback (most recent call last):
+  File "asyncio\runners.py", line 196, in run
+  File "asyncio\runners.py", line 119, in run
+  File "asyncio\base_events.py", line 713, in run_until_complete
+  File "asyncio\base_events.py", line 684, in run_forever
+  File "asyncio\base_events.py", line 2061, in _run_once
+  File "asyncio\events.py", line 89, in _run
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\uvicorn\server.py", line 89, in serve
+    with self.capture_signals():
+         ~~~~~~~~~~~~~~~~~~~~^^
+  File "contextlib.py", line 148, in __exit__
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\uvicorn\server.py", line 349, in capture_signals
+    signal.raise_signal(captured_signal)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "asyncio\runners.py", line 158, in _on_sigint
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\starlette\routing.py", line 663, in lifespan
+    await receive()
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\fastapi\telemetry\_runtime.py", line 214, in wrapped_receive
+    message = await receive()
+              ^^^^^^^^^^^^^^^
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\uvicorn\lifespan\on.py", line 137, in receive
+    return await self.receive_queue.get()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "asyncio\queues.py", line 186, in get
+asyncio.exceptions.CancelledError
+
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "asyncio\runners.py", line 196, in run
+  File "asyncio\runners.py", line 119, in run
+  File "asyncio\base_events.py", line 713, in run_until_complete
+  File "asyncio\base_events.py", line 684, in run_forever
+  File "asyncio\base_events.py", line 2061, in _run_once
+  File "asyncio\events.py", line 89, in _run
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\uvicorn\server.py", line 89, in serve
+    with self.capture_signals():
+         ~~~~~~~~~~~~~~~~~~~~^^
+  File "contextlib.py", line 148, in __exit__
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\uvicorn\server.py", line 349, in capture_signals
+    signal.raise_signal(captured_signal)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "asyncio\runners.py", line 158, in _on_sigint
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\uvicorn\protocols\websockets\websockets_sansio_impl.py", line 409, in run_asgi
+    result = await self.app(self.scope, self.receive, self.send)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\uvicorn\middleware\proxy_headers.py", line 63, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\fastapi\applications.py", line 1194, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\starlette\applications.py", line 96, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\starlette\middleware\errors.py", line 151, in __call__
+    await self.app(scope, receive, send)
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\fastapi\telemetry\_asgi.py", line 151, in __call__
+    await self.app(scope, receive, send)
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\starlette\middleware\cors.py", line 79, in __call__
+    await self.app(scope, receive, send)
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\starlette\routing.py", line 678, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\fastapi\routing.py", line 2813, in app
+    await route.handle(scope, receive, send)
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\fastapi\routing.py", line 1841, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\fastapi\routing.py", line 2896, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\fastapi\routing.py", line 1852, in _handle_selected
+    await route.handle(scope, receive, send)
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\fastapi\routing.py", line 1841, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\fastapi\routing.py", line 2896, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\fastapi\routing.py", line 1869, in _handle_selected
+    await route.handle(scope, receive, send)
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\starlette\routing.py", line 358, in handle
+    await self.app(scope, receive, send)
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\fastapi\routing.py", line 193, in app
+    await wrap_app_handling_exceptions(app, session)(scope, receive, send)
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\fastapi\routing.py", line 190, in app
+    await func(session)
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\fastapi\routing.py", line 850, in app
+    await dependant.call(**solved_result.values)
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\nsflow\backend\api\v1\fast_websocket.py", line 46, in websocket_internal_chat
+    await manager.handle_internal_chat_websocket(websocket)
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\nsflow\backend\utils\logutils\websocket_logs_manager.py", line 151, in handle_internal_chat_websocket
+    await asyncio.sleep(1)
+  File "asyncio\tasks.py", line 720, in sleep
+asyncio.exceptions.CancelledError
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "asyncio\runners.py", line 196, in run
+  File "asyncio\runners.py", line 119, in run
+  File "asyncio\base_events.py", line 713, in run_until_complete
+  File "asyncio\base_events.py", line 684, in run_forever
+  File "asyncio\base_events.py", line 2061, in _run_once
+  File "asyncio\events.py", line 89, in _run
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\uvicorn\server.py", line 89, in serve
+    with self.capture_signals():
+         ~~~~~~~~~~~~~~~~~~~~^^
+  File "contextlib.py", line 148, in __exit__
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\uvicorn\server.py", line 349, in capture_signals
+    signal.raise_signal(captured_signal)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "asyncio\runners.py", line 158, in _on_sigint
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\uvicorn\protocols\websockets\websockets_sansio_impl.py", line 409, in run_asgi
+    result = await self.app(self.scope, self.receive, self.send)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\uvicorn\middleware\proxy_headers.py", line 63, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\fastapi\applications.py", line 1194, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\starlette\applications.py", line 96, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\starlette\middleware\errors.py", line 151, in __call__
+    await self.app(scope, receive, send)
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\fastapi\telemetry\_asgi.py", line 151, in __call__
+    await self.app(scope, receive, send)
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\starlette\middleware\cors.py", line 79, in __call__
+    await self.app(scope, receive, send)
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\starlette\routing.py", line 678, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\fastapi\routing.py", line 2813, in app
+    await route.handle(scope, receive, send)
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\fastapi\routing.py", line 1841, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\fastapi\routing.py", line 2896, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\fastapi\routing.py", line 1852, in _handle_selected
+    await route.handle(scope, receive, send)
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\fastapi\routing.py", line 1841, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\fastapi\routing.py", line 2896, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\fastapi\routing.py", line 1869, in _handle_selected
+    await route.handle(scope, receive, send)
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\starlette\routing.py", line 358, in handle
+    await self.app(scope, receive, send)
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\fastapi\routing.py", line 193, in app
+    await wrap_app_handling_exceptions(app, session)(scope, receive, send)
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\fastapi\routing.py", line 190, in app
+    await func(session)
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\fastapi\routing.py", line 850, in app
+    await dependant.call(**solved_result.values)
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\nsflow\backend\api\v1\fast_websocket.py", line 53, in websocket_logs
+    await manager.handle_log_websocket(websocket)
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\nsflow\backend\utils\logutils\websocket_logs_manager.py", line 166, in handle_log_websocket
+    await asyncio.sleep(2)
+  File "asyncio\tasks.py", line 720, in sleep
+asyncio.exceptions.CancelledError
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "asyncio\runners.py", line 196, in run
+  File "asyncio\runners.py", line 119, in run
+  File "asyncio\base_events.py", line 713, in run_until_complete
+  File "asyncio\base_events.py", line 684, in run_forever
+  File "asyncio\base_events.py", line 2061, in _run_once
+  File "asyncio\events.py", line 89, in _run
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\uvicorn\server.py", line 89, in serve
+    with self.capture_signals():
+         ~~~~~~~~~~~~~~~~~~~~^^
+  File "contextlib.py", line 148, in __exit__
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\uvicorn\server.py", line 349, in capture_signals
+    signal.raise_signal(captured_signal)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "asyncio\runners.py", line 158, in _on_sigint
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\uvicorn\protocols\websockets\websockets_sansio_impl.py", line 409, in run_asgi
+    result = await self.app(self.scope, self.receive, self.send)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\uvicorn\middleware\proxy_headers.py", line 63, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\fastapi\applications.py", line 1194, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\starlette\applications.py", line 96, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\starlette\middleware\errors.py", line 151, in __call__
+    await self.app(scope, receive, send)
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\fastapi\telemetry\_asgi.py", line 151, in __call__
+    await self.app(scope, receive, send)
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\starlette\middleware\cors.py", line 79, in __call__
+    await self.app(scope, receive, send)
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\starlette\routing.py", line 678, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\fastapi\routing.py", line 2813, in app
+    await route.handle(scope, receive, send)
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\fastapi\routing.py", line 1841, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\fastapi\routing.py", line 2896, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\fastapi\routing.py", line 1852, in _handle_selected
+    await route.handle(scope, receive, send)
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\fastapi\routing.py", line 1841, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\fastapi\routing.py", line 2896, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\fastapi\routing.py", line 1869, in _handle_selected
+    await route.handle(scope, receive, send)
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\starlette\routing.py", line 358, in handle
+    await self.app(scope, receive, send)
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\fastapi\routing.py", line 193, in app
+    await wrap_app_handling_exceptions(app, session)(scope, receive, send)
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\fastapi\routing.py", line 190, in app
+    await func(session)
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\fastapi\routing.py", line 850, in app
+    await dependant.call(**solved_result.values)
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\nsflow\backend\api\v1\fast_websocket.py", line 53, in websocket_logs
+    await manager.handle_log_websocket(websocket)
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\nsflow\backend\utils\logutils\websocket_logs_manager.py", line 166, in handle_log_websocket
+    await asyncio.sleep(2)
+  File "asyncio\tasks.py", line 720, in sleep
+asyncio.exceptions.CancelledError
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "asyncio\runners.py", line 196, in run
+  File "asyncio\runners.py", line 119, in run
+  File "asyncio\base_events.py", line 713, in run_until_complete
+  File "asyncio\base_events.py", line 684, in run_forever
+  File "asyncio\base_events.py", line 2061, in _run_once
+  File "asyncio\events.py", line 89, in _run
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\uvicorn\server.py", line 89, in serve
+    with self.capture_signals():
+         ~~~~~~~~~~~~~~~~~~~~^^
+  File "contextlib.py", line 148, in __exit__
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\uvicorn\server.py", line 349, in capture_signals
+    signal.raise_signal(captured_signal)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "asyncio\runners.py", line 158, in _on_sigint
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\uvicorn\protocols\websockets\websockets_sansio_impl.py", line 409, in run_asgi
+    result = await self.app(self.scope, self.receive, self.send)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\uvicorn\middleware\proxy_headers.py", line 63, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\fastapi\applications.py", line 1194, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\starlette\applications.py", line 96, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\starlette\middleware\errors.py", line 151, in __call__
+    await self.app(scope, receive, send)
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\fastapi\telemetry\_asgi.py", line 151, in __call__
+    await self.app(scope, receive, send)
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\starlette\middleware\cors.py", line 79, in __call__
+    await self.app(scope, receive, send)
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\starlette\routing.py", line 678, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\fastapi\routing.py", line 2813, in app
+    await route.handle(scope, receive, send)
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\fastapi\routing.py", line 1841, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\fastapi\routing.py", line 2896, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\fastapi\routing.py", line 1852, in _handle_selected
+    await route.handle(scope, receive, send)
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\fastapi\routing.py", line 1841, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\fastapi\routing.py", line 2896, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\fastapi\routing.py", line 1869, in _handle_selected
+    await route.handle(scope, receive, send)
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\starlette\routing.py", line 358, in handle
+    await self.app(scope, receive, send)
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\fastapi\routing.py", line 193, in app
+    await wrap_app_handling_exceptions(app, session)(scope, receive, send)
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\fastapi\routing.py", line 190, in app
+    await func(session)
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\fastapi\routing.py", line 850, in app
+    await dependant.call(**solved_result.values)
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\nsflow\backend\api\v1\fast_websocket.py", line 67, in websocket_progress
+    await manager.handle_progress_websocket(websocket)
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\nsflow\backend\utils\logutils\websocket_logs_manager.py", line 196, in handle_progress_websocket
+    await asyncio.sleep(ASYNCIO_SLEEP_INTERVAL)
+  File "asyncio\tasks.py", line 720, in sleep
+asyncio.exceptions.CancelledError
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "asyncio\runners.py", line 196, in run
+  File "asyncio\runners.py", line 119, in run
+  File "asyncio\base_events.py", line 713, in run_until_complete
+  File "asyncio\base_events.py", line 684, in run_forever
+  File "asyncio\base_events.py", line 2061, in _run_once
+  File "asyncio\events.py", line 89, in _run
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\uvicorn\server.py", line 89, in serve
+    with self.capture_signals():
+         ~~~~~~~~~~~~~~~~~~~~^^
+  File "contextlib.py", line 148, in __exit__
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\uvicorn\server.py", line 349, in capture_signals
+    signal.raise_signal(captured_signal)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "asyncio\runners.py", line 158, in _on_sigint
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\uvicorn\protocols\websockets\websockets_sansio_impl.py", line 409, in run_asgi
+    result = await self.app(self.scope, self.receive, self.send)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\uvicorn\middleware\proxy_headers.py", line 63, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\fastapi\applications.py", line 1194, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\starlette\applications.py", line 96, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\starlette\middleware\errors.py", line 151, in __call__
+    await self.app(scope, receive, send)
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\fastapi\telemetry\_asgi.py", line 151, in __call__
+    await self.app(scope, receive, send)
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\starlette\middleware\cors.py", line 79, in __call__
+    await self.app(scope, receive, send)
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\starlette\routing.py", line 678, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\fastapi\routing.py", line 2813, in app
+    await route.handle(scope, receive, send)
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\fastapi\routing.py", line 1841, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\fastapi\routing.py", line 2896, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\fastapi\routing.py", line 1852, in _handle_selected
+    await route.handle(scope, receive, send)
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\fastapi\routing.py", line 1841, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\fastapi\routing.py", line 2896, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\fastapi\routing.py", line 1869, in _handle_selected
+    await route.handle(scope, receive, send)
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\starlette\routing.py", line 358, in handle
+    await self.app(scope, receive, send)
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\fastapi\routing.py", line 193, in app
+    await wrap_app_handling_exceptions(app, session)(scope, receive, send)
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\fastapi\routing.py", line 190, in app
+    await func(session)
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\fastapi\routing.py", line 850, in app
+    await dependant.call(**solved_result.values)
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\nsflow\backend\api\v1\fast_websocket.py", line 60, in websocket_slydata
+    await manager.handle_sly_data_websocket(websocket)
+  File "C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\nsflow\backend\utils\logutils\websocket_logs_manager.py", line 181, in handle_sly_data_websocket
+    await asyncio.sleep(3)
+  File "asyncio\tasks.py", line 720, in sleep
+asyncio.exceptions.CancelledError
+INFO:     Stopping reloader process [13120]

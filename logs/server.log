@@ -2833,3 +2833,226 @@ GIL state at server startup:  standard CPython build (GIL always enabled). CPyth
 {"message": "[0] 200 POST /api/v1/release_readiness/streaming_chat (::1) 63866.32ms", "user_id": "None", "Timestamp": "2026-10-23T17:01:32.158922", "source": "HttpServer", "message_type": "Other", "request_id": "request-3"}
 {"message": "[0] Finish release_readiness/streaming_chat", "user_id": "None", "Timestamp": "2026-10-23T17:01:32.159787", "source": "HttpServer", "message_type": "Other", "request_id": "request-3"}
 {"message": "[0] Stats: {'NumProcessing': 0, 'Total': 3, '/api/v1/list': 1, 'release_readiness/connectivity': 1, 'release_readiness/streaming_chat': 1}", "user_id": "None", "Timestamp": "2026-10-23T17:01:32.161443", "source": "HttpServer", "message_type": "Other", "request_id": "request-3"}
+Loading plugin: ProcessLogBridgePlugin from module: neuro_san_studio.plugins.log_bridge.process_log_bridge_plugin
+Loaded plugin: ProcessLogBridgePlugin Plugin
+Initializing plugin: ProcessLogBridgePlugin Plugin
+[ProcessLogBridgePlugin] Initializing (PID=41488)
+[ProcessLogBridgePlugin] Initialized (PID=41488)
+Manifest file C:\progs\hackathon\code_repo\release_readiness_agent\registries\manifest.hocon restored in 41.99 seconds.
+Reading C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\neuro_san\deploy\logging.hocon
+GIL state at server startup:  standard CPython build (GIL always enabled). CPython 3.13.15.  PYTHON_GIL=unset
+{"message": "Using Authorizer: neuro_san.service.authorization.null.always_yes_authorizer.AlwaysYesAuthorizer", "user_id": "None", "Timestamp": "2026-10-24T10:33:48.895677", "source": "HttpServer", "message_type": "Other", "request_id": "None"}
+>>>>>>>>>>>> Enabling MCP service...
+{"message": "Added agent tools/internet_info_gatherer to allowed http service list", "user_id": "None", "Timestamp": "2026-10-24T10:33:48.944631", "source": "HttpServer", "message_type": "Other", "request_id": "None"}
+{"message": "ADDED network for agent tools/internet_info_gatherer (6327 bytes): 2269615769360", "user_id": "None", "Timestamp": "2026-10-24T10:33:48.944867", "source": "HttpServer", "message_type": "Other", "request_id": "None"}
+{"message": "Added agent agent_network_designer to allowed http service list", "user_id": "None", "Timestamp": "2026-10-24T10:33:48.944958", "source": "HttpServer", "message_type": "Other", "request_id": "None"}
+{"message": "ADDED network for agent agent_network_designer (37460 bytes): 2269616272528", "user_id": "None", "Timestamp": "2026-10-24T10:33:48.945026", "source": "HttpServer", "message_type": "Other", "request_id": "None"}
+{"message": "Added agent agent_network_test_generator to allowed http service list", "user_id": "None", "Timestamp": "2026-10-24T10:33:48.945086", "source": "HttpServer", "message_type": "Other", "request_id": "None"}
+{"message": "ADDED network for agent agent_network_test_generator (44950 bytes): 2269459047808", "user_id": "None", "Timestamp": "2026-10-24T10:33:48.945135", "source": "HttpServer", "message_type": "Other", "request_id": "None"}
+{"message": "Added agent basic/music_nerd to allowed http service list", "user_id": "None", "Timestamp": "2026-10-24T10:33:48.945185", "source": "HttpServer", "message_type": "Other", "request_id": "None"}
+{"message": "ADDED network for agent basic/music_nerd (4645 bytes): 2269616099008", "user_id": "None", "Timestamp": "2026-10-24T10:33:48.945230", "source": "HttpServer", "message_type": "Other", "request_id": "None"}
+{"message": "Added agent release_readiness to allowed http service list", "user_id": "None", "Timestamp": "2026-10-24T10:33:48.945457", "source": "HttpServer", "message_type": "Other", "request_id": "None"}
+{"message": "ADDED network for agent release_readiness (32945 bytes): 2269458930640", "user_id": "None", "Timestamp": "2026-10-24T10:33:48.945608", "source": "HttpServer", "message_type": "Other", "request_id": "None"}
+{"message": "Added agent agent_network_editor to allowed http service list", "user_id": "None", "Timestamp": "2026-10-24T10:33:48.945717", "source": "HttpServer", "message_type": "Other", "request_id": "None"}
+{"message": "ADDED network for agent agent_network_editor (31208 bytes): 2269616274960", "user_id": "None", "Timestamp": "2026-10-24T10:33:48.945791", "source": "HttpServer", "message_type": "Other", "request_id": "None"}
+{"message": "Added agent agent_network_instructions_editor to allowed http service list", "user_id": "None", "Timestamp": "2026-10-24T10:33:48.945861", "source": "HttpServer", "message_type": "Other", "request_id": "None"}
+{"message": "ADDED network for agent agent_network_instructions_editor (25514 bytes): 2269615255632", "user_id": "None", "Timestamp": "2026-10-24T10:33:48.945921", "source": "HttpServer", "message_type": "Other", "request_id": "None"}
+{"message": "Added agent experimental/cruse_widget_agent to allowed http service list", "user_id": "None", "Timestamp": "2026-10-24T10:33:48.945986", "source": "HttpServer", "message_type": "Other", "request_id": "None"}
+{"message": "ADDED network for agent experimental/cruse_widget_agent (12904 bytes): 2269615246672", "user_id": "None", "Timestamp": "2026-10-24T10:33:48.946044", "source": "HttpServer", "message_type": "Other", "request_id": "None"}
+{"message": "Added agent agent_network_query_generator to allowed http service list", "user_id": "None", "Timestamp": "2026-10-24T10:33:48.946150", "source": "HttpServer", "message_type": "Other", "request_id": "None"}
+{"message": "ADDED network for agent agent_network_query_generator (7987 bytes): 2269458928400", "user_id": "None", "Timestamp": "2026-10-24T10:33:48.946315", "source": "HttpServer", "message_type": "Other", "request_id": "None"}
+{"message": "Added agent experimental/cruse_theme_agent to allowed http service list", "user_id": "None", "Timestamp": "2026-10-24T10:33:48.946599", "source": "HttpServer", "message_type": "Other", "request_id": "None"}
+{"message": "ADDED network for agent experimental/cruse_theme_agent (25791 bytes): 2269459052432", "user_id": "None", "Timestamp": "2026-10-24T10:33:48.946679", "source": "HttpServer", "message_type": "Other", "request_id": "None"}
+{"message": "Starting HTTP server instance (worker_id=0 of 1, pid=41488)", "user_id": "None", "Timestamp": "2026-10-24T10:33:49.000129", "source": "HttpServer", "message_type": "Other", "request_id": "None"}
+{"message": "HTTP server is running 1 instances on port 8080 with backlog 128", "user_id": "None", "Timestamp": "2026-10-24T10:33:49.017256", "source": "HttpServer", "message_type": "Other", "request_id": "None"}
+{"message": "HTTP server idle connections timeout: 3600 seconds", "user_id": "None", "Timestamp": "2026-10-24T10:33:49.017545", "source": "HttpServer", "message_type": "Other", "request_id": "None"}
+{"message": "HTTP server is shutting down after 987672 requests", "user_id": "None", "Timestamp": "2026-10-24T10:33:49.017675", "source": "HttpServer", "message_type": "Other", "request_id": "None"}
+{"message": "MCP server is running protocol 2025-06-18", "user_id": "None", "Timestamp": "2026-10-24T10:33:49.017771", "source": "HttpServer", "message_type": "Other", "request_id": "None"}
+{"message": "Starting StorageWatcher with 5 seconds period", "user_id": "None", "Timestamp": "2026-10-24T10:33:49.017855", "source": "HttpServer", "message_type": "Other", "request_id": "None"}
+{"message": "Starting RegistryStorageUpdater for ['C:\\progs\\hackathon\\code_repo\\release_readiness_agent\\registries\\manifest.hocon'] with 5 seconds period", "user_id": "None", "Timestamp": "2026-10-24T10:33:49.017937", "source": "HttpServer", "message_type": "Other", "request_id": "None"}
+{"message": "Registry polling watchdog started on: C:\progs\hackathon\code_repo\release_readiness_agent\registries for manifest ['C:\\progs\\hackathon\\code_repo\\release_readiness_agent\\registries\\manifest.hocon'] with polling every 1 sec", "user_id": "None", "Timestamp": "2026-10-24T10:33:49.024472", "source": "HttpServer", "message_type": "Other", "request_id": "None"}
+{"message": "Starting TempNetworkStorageUpdater", "user_id": "None", "Timestamp": "2026-10-24T10:33:49.025505", "source": "HttpServer", "message_type": "Other", "request_id": "None"}
+{"message": "Waiting for new queues to be added for processing", "user_id": "None", "Timestamp": "2026-10-24T10:33:49.033257", "source": "HttpServer", "message_type": "Other", "request_id": "None"}
+{"message": "Starting EventWorkMonitor with 0.500000 seconds period", "user_id": "None", "Timestamp": "2026-10-24T10:33:49.034064", "source": "HttpServer", "message_type": "Other", "request_id": "None"}
+{"message": "Starting PeriodicEventInitiator with 1.000000 seconds period", "user_id": "None", "Timestamp": "2026-10-24T10:33:49.034948", "source": "HttpServer", "message_type": "Other", "request_id": "None"}
+{"message": "HealthProbeServer failed to bind port 8081 (reuse_port=True): the platform doesn't support SO_REUSEPORT", "user_id": "None", "Timestamp": "2026-10-24T10:33:49.042822", "source": "HttpServer", "message_type": "Error", "request_id": "None"}
+{"message": "Found 0 periodic agent interactions", "user_id": "None", "Timestamp": "2026-10-24T10:33:49.043706", "source": "HttpServer", "message_type": "Other", "request_id": "None"}
+{"message": "[0] Start /api/v1/list", "user_id": "None", "Timestamp": "2026-10-24T10:33:54.217244", "source": "HttpServer", "message_type": "Other", "request_id": "request-1"}
+{"message": "[0] 200 GET /api/v1/list (::1) 5.77ms", "user_id": "None", "Timestamp": "2026-10-24T10:33:54.219866", "source": "HttpServer", "message_type": "Other", "request_id": "request-1"}
+{"message": "[0] Finish /api/v1/list", "user_id": "None", "Timestamp": "2026-10-24T10:33:54.220413", "source": "HttpServer", "message_type": "Other", "request_id": "request-1"}
+Loading plugin: ProcessLogBridgePlugin from module: neuro_san_studio.plugins.log_bridge.process_log_bridge_plugin
+Loaded plugin: ProcessLogBridgePlugin Plugin
+Initializing plugin: ProcessLogBridgePlugin Plugin
+[ProcessLogBridgePlugin] Initializing (PID=17152)
+[ProcessLogBridgePlugin] Initialized (PID=17152)
+Manifest file C:\progs\hackathon\code_repo\release_readiness_agent\registries\manifest.hocon restored in 44.81 seconds.
+Reading C:\progs\hackathon\release_readiness_agent\.venv\Lib\site-packages\neuro_san\deploy\logging.hocon
+GIL state at server startup:  standard CPython build (GIL always enabled). CPython 3.13.15.  PYTHON_GIL=unset
+{"message": "Using Authorizer: neuro_san.service.authorization.null.always_yes_authorizer.AlwaysYesAuthorizer", "user_id": "None", "Timestamp": "2026-10-24T11:15:32.626502", "source": "HttpServer", "message_type": "Other", "request_id": "None"}
+>>>>>>>>>>>> Enabling MCP service...
+{"message": "Added agent tools/internet_info_gatherer to allowed http service list", "user_id": "None", "Timestamp": "2026-10-24T11:15:32.684373", "source": "HttpServer", "message_type": "Other", "request_id": "None"}
+{"message": "ADDED network for agent tools/internet_info_gatherer (6327 bytes): 1239321495312", "user_id": "None", "Timestamp": "2026-10-24T11:15:32.684751", "source": "HttpServer", "message_type": "Other", "request_id": "None"}
+{"message": "Added agent agent_network_test_generator to allowed http service list", "user_id": "None", "Timestamp": "2026-10-24T11:15:32.684926", "source": "HttpServer", "message_type": "Other", "request_id": "None"}
+{"message": "ADDED network for agent agent_network_test_generator (44958 bytes): 1239320896896", "user_id": "None", "Timestamp": "2026-10-24T11:15:32.685032", "source": "HttpServer", "message_type": "Other", "request_id": "None"}
+{"message": "Added agent agent_network_designer to allowed http service list", "user_id": "None", "Timestamp": "2026-10-24T11:15:32.685121", "source": "HttpServer", "message_type": "Other", "request_id": "None"}
+{"message": "ADDED network for agent agent_network_designer (37460 bytes): 1239322000000", "user_id": "None", "Timestamp": "2026-10-24T11:15:32.685190", "source": "HttpServer", "message_type": "Other", "request_id": "None"}
+{"message": "Added agent release_readiness to allowed http service list", "user_id": "None", "Timestamp": "2026-10-24T11:15:32.685545", "source": "HttpServer", "message_type": "Other", "request_id": "None"}
+{"message": "ADDED network for agent release_readiness (32945 bytes): 1239164558288", "user_id": "None", "Timestamp": "2026-10-24T11:15:32.685661", "source": "HttpServer", "message_type": "Other", "request_id": "None"}
+{"message": "Added agent basic/music_nerd to allowed http service list", "user_id": "None", "Timestamp": "2026-10-24T11:15:32.685753", "source": "HttpServer", "message_type": "Other", "request_id": "None"}
+{"message": "ADDED network for agent basic/music_nerd (4645 bytes): 1239321824960", "user_id": "None", "Timestamp": "2026-10-24T11:15:32.685825", "source": "HttpServer", "message_type": "Other", "request_id": "None"}
+{"message": "Added agent experimental/cruse_theme_agent to allowed http service list", "user_id": "None", "Timestamp": "2026-10-24T11:15:32.685931", "source": "HttpServer", "message_type": "Other", "request_id": "None"}
+{"message": "ADDED network for agent experimental/cruse_theme_agent (25783 bytes): 1239320901520", "user_id": "None", "Timestamp": "2026-10-24T11:15:32.686000", "source": "HttpServer", "message_type": "Other", "request_id": "None"}
+{"message": "Added agent experimental/cruse_widget_agent to allowed http service list", "user_id": "None", "Timestamp": "2026-10-24T11:15:32.686089", "source": "HttpServer", "message_type": "Other", "request_id": "None"}
+{"message": "ADDED network for agent experimental/cruse_widget_agent (12904 bytes): 1239320989008", "user_id": "None", "Timestamp": "2026-10-24T11:15:32.686155", "source": "HttpServer", "message_type": "Other", "request_id": "None"}
+{"message": "Added agent agent_network_editor to allowed http service list", "user_id": "None", "Timestamp": "2026-10-24T11:15:32.686227", "source": "HttpServer", "message_type": "Other", "request_id": "None"}
+{"message": "ADDED network for agent agent_network_editor (31208 bytes): 1239164556048", "user_id": "None", "Timestamp": "2026-10-24T11:15:32.686287", "source": "HttpServer", "message_type": "Other", "request_id": "None"}
+{"message": "Added agent agent_network_query_generator to allowed http service list", "user_id": "None", "Timestamp": "2026-10-24T11:15:32.686370", "source": "HttpServer", "message_type": "Other", "request_id": "None"}
+{"message": "ADDED network for agent agent_network_query_generator (7987 bytes): 1239321998480", "user_id": "None", "Timestamp": "2026-10-24T11:15:32.686435", "source": "HttpServer", "message_type": "Other", "request_id": "None"}
+{"message": "Added agent agent_network_instructions_editor to allowed http service list", "user_id": "None", "Timestamp": "2026-10-24T11:15:32.686512", "source": "HttpServer", "message_type": "Other", "request_id": "None"}
+{"message": "ADDED network for agent agent_network_instructions_editor (25514 bytes): 1239320997968", "user_id": "None", "Timestamp": "2026-10-24T11:15:32.686589", "source": "HttpServer", "message_type": "Other", "request_id": "None"}
+{"message": "Starting HTTP server instance (worker_id=0 of 1, pid=17152)", "user_id": "None", "Timestamp": "2026-10-24T11:15:32.758820", "source": "HttpServer", "message_type": "Other", "request_id": "None"}
+{"message": "HTTP server is running 1 instances on port 8080 with backlog 128", "user_id": "None", "Timestamp": "2026-10-24T11:15:32.776261", "source": "HttpServer", "message_type": "Other", "request_id": "None"}
+{"message": "HTTP server idle connections timeout: 3600 seconds", "user_id": "None", "Timestamp": "2026-10-24T11:15:32.776552", "source": "HttpServer", "message_type": "Other", "request_id": "None"}
+{"message": "HTTP server is shutting down after 912637 requests", "user_id": "None", "Timestamp": "2026-10-24T11:15:32.776670", "source": "HttpServer", "message_type": "Other", "request_id": "None"}
+{"message": "MCP server is running protocol 2025-06-18", "user_id": "None", "Timestamp": "2026-10-24T11:15:32.776771", "source": "HttpServer", "message_type": "Other", "request_id": "None"}
+{"message": "Starting StorageWatcher with 5 seconds period", "user_id": "None", "Timestamp": "2026-10-24T11:15:32.776867", "source": "HttpServer", "message_type": "Other", "request_id": "None"}
+{"message": "Starting RegistryStorageUpdater for ['C:\\progs\\hackathon\\code_repo\\release_readiness_agent\\registries\\manifest.hocon'] with 5 seconds period", "user_id": "None", "Timestamp": "2026-10-24T11:15:32.776961", "source": "HttpServer", "message_type": "Other", "request_id": "None"}
+{"message": "Registry polling watchdog started on: C:\progs\hackathon\code_repo\release_readiness_agent\registries for manifest ['C:\\progs\\hackathon\\code_repo\\release_readiness_agent\\registries\\manifest.hocon'] with polling every 1 sec", "user_id": "None", "Timestamp": "2026-10-24T11:15:32.783546", "source": "HttpServer", "message_type": "Other", "request_id": "None"}
+{"message": "Starting TempNetworkStorageUpdater", "user_id": "None", "Timestamp": "2026-10-24T11:15:32.784616", "source": "HttpServer", "message_type": "Other", "request_id": "None"}
+{"message": "Waiting for new queues to be added for processing", "user_id": "None", "Timestamp": "2026-10-24T11:15:32.789783", "source": "HttpServer", "message_type": "Other", "request_id": "None"}
+{"message": "Starting EventWorkMonitor with 0.500000 seconds period", "user_id": "None", "Timestamp": "2026-10-24T11:15:32.790510", "source": "HttpServer", "message_type": "Other", "request_id": "None"}
+{"message": "Starting PeriodicEventInitiator with 1.000000 seconds period", "user_id": "None", "Timestamp": "2026-10-24T11:15:32.792825", "source": "HttpServer", "message_type": "Other", "request_id": "None"}
+{"message": "Found 0 periodic agent interactions", "user_id": "None", "Timestamp": "2026-10-24T11:15:32.801367", "source": "HttpServer", "message_type": "Other", "request_id": "None"}
+{"message": "HealthProbeServer failed to bind port 8081 (reuse_port=True): the platform doesn't support SO_REUSEPORT", "user_id": "None", "Timestamp": "2026-10-24T11:15:32.802385", "source": "HttpServer", "message_type": "Error", "request_id": "None"}
+{"message": "[0] Start /api/v1/list", "user_id": "None", "Timestamp": "2026-10-24T11:15:36.629550", "source": "HttpServer", "message_type": "Other", "request_id": "request-1"}
+{"message": "[0] 200 GET /api/v1/list (::1) 6.34ms", "user_id": "None", "Timestamp": "2026-10-24T11:15:36.632666", "source": "HttpServer", "message_type": "Other", "request_id": "request-1"}
+{"message": "[0] Finish /api/v1/list", "user_id": "None", "Timestamp": "2026-10-24T11:15:36.633431", "source": "HttpServer", "message_type": "Other", "request_id": "request-1"}
+{"message": "[0] Start release_readiness/connectivity", "user_id": "None", "Timestamp": "2026-10-24T11:15:43.278017", "source": "HttpServer", "message_type": "Other", "request_id": "request-2"}
+{"message": "Received a release_readiness.Connectivity request for connectivity request", "user_id": "None", "Timestamp": "2026-10-24T11:15:43.278446", "source": "HttpServer", "message_type": "Other", "request_id": "request-2"}
+{"message": "Agent network 'release_readiness' (ID: 1239164558288) used for operation: connectivity", "user_id": "None", "Timestamp": "2026-10-24T11:15:43.278632", "source": "HttpServer", "message_type": "Other", "request_id": "None"}
+{"message": "Done with release_readiness.Connectivity request for connectivity request", "user_id": "None", "Timestamp": "2026-10-24T11:15:43.279169", "source": "HttpServer", "message_type": "Other", "request_id": "request-2"}
+{"message": "[0] 200 GET /api/v1/release_readiness/connectivity (::1) 3448.09ms", "user_id": "None", "Timestamp": "2026-10-24T11:15:43.280501", "source": "HttpServer", "message_type": "Other", "request_id": "request-2"}
+{"message": "[0] Finish release_readiness/connectivity", "user_id": "None", "Timestamp": "2026-10-24T11:15:43.280868", "source": "HttpServer", "message_type": "Other", "request_id": "request-2"}
+{"message": "[0] Start release_readiness/connectivity", "user_id": "None", "Timestamp": "2026-10-24T11:15:43.315580", "source": "HttpServer", "message_type": "Other", "request_id": "request-3"}
+{"message": "Received a release_readiness.Connectivity request for connectivity request", "user_id": "None", "Timestamp": "2026-10-24T11:15:43.316020", "source": "HttpServer", "message_type": "Other", "request_id": "request-3"}
+{"message": "Agent network 'release_readiness' (ID: 1239164558288) used for operation: connectivity", "user_id": "None", "Timestamp": "2026-10-24T11:15:43.316248", "source": "HttpServer", "message_type": "Other", "request_id": "None"}
+{"message": "Done with release_readiness.Connectivity request for connectivity request", "user_id": "None", "Timestamp": "2026-10-24T11:15:43.317326", "source": "HttpServer", "message_type": "Other", "request_id": "request-3"}
+{"message": "[0] 200 GET /api/v1/release_readiness/connectivity (::1) 6.82ms", "user_id": "None", "Timestamp": "2026-10-24T11:15:43.318710", "source": "HttpServer", "message_type": "Other", "request_id": "request-3"}
+{"message": "[0] Finish release_readiness/connectivity", "user_id": "None", "Timestamp": "2026-10-24T11:15:43.319717", "source": "HttpServer", "message_type": "Other", "request_id": "request-3"}
+{"message": "[0] Start release_readiness/streaming_chat", "user_id": "None", "Timestamp": "2026-10-24T11:20:09.199033", "source": "HttpServer", "message_type": "Other", "request_id": "request-4"}
+{"message": "Received a release_readiness.StreamingChat request for 'check the PR https://github.com/gokul04/onlinebookstore/pull/1, local repo is checked out at C:\progs\hackathon\code_repo\onlinebookstore'", "user_id": "None", "Timestamp": "2026-10-24T11:20:09.201394", "source": "HttpServer", "message_type": "Other", "request_id": "request-4"}
+{"message": "Agent network 'release_readiness' (ID: 1239164558288) used for operation: streaming_chat", "user_id": "None", "Timestamp": "2026-10-24T11:20:09.212003", "source": "HttpServer", "message_type": "Other", "request_id": "None"}
+{"message": "No price info found for model cohere/north-mini-code:free in llm info. Token cost defaults to 0.", "user_id": "None", "Timestamp": "2026-10-24T11:20:20.482654", "source": "HttpServer", "message_type": "Warning", "request_id": "request-4"}
+{"message": "No price info found for model nvidia/nemotron-3-ultra-550b-a55b:free in llm info. Token cost defaults to 0.", "user_id": "None", "Timestamp": "2026-10-24T11:20:29.927164", "source": "HttpServer", "message_type": "Warning", "request_id": "request-4"}
+{"message": "No price info found for model nvidia/nemotron-3-ultra-550b-a55b:free in llm info. Token cost defaults to 0.", "user_id": "None", "Timestamp": "2026-10-24T11:20:29.927670", "source": "HttpServer", "message_type": "Warning", "request_id": "request-4"}
+{"message": "Calling class release_readiness.test_coverage_tool.TestCoverageTool", "user_id": "None", "Timestamp": "2026-10-24T11:20:29.934530", "source": "HttpServer", "message_type": "Other", "request_id": "request-4"}
+{"message": "AGENT_TOOL_PATH_ONLY is not enabled: CodedTool 'class' references can resolve via fully-qualified import from anywhere on the PYTHONPATH. Set AGENT_TOOL_PATH_ONLY=true to restrict resolution to the AGENT_TOOL_PATH hierarchy.", "user_id": "None", "Timestamp": "2026-10-24T11:20:29.935408", "source": "HttpServer", "message_type": "Other", "request_id": "request-4"}
+{"message": "No price info found for model nvidia/nemotron-3-ultra-550b-a55b:free in llm info. Token cost defaults to 0.", "user_id": "None", "Timestamp": "2026-10-24T11:20:30.933835", "source": "HttpServer", "message_type": "Warning", "request_id": "request-4"}
+{"message": "No price info found for model nvidia/nemotron-3-ultra-550b-a55b:free in llm info. Token cost defaults to 0.", "user_id": "None", "Timestamp": "2026-10-24T11:20:30.934335", "source": "HttpServer", "message_type": "Warning", "request_id": "request-4"}
+{"message": "Calling class release_readiness.architecture_compliance_tool.ArchitectureComplianceTool", "user_id": "None", "Timestamp": "2026-10-24T11:20:30.941307", "source": "HttpServer", "message_type": "Other", "request_id": "request-4"}
+{"message": "No price info found for model recursive/flint-v1.0:free in llm info. Token cost defaults to 0.", "user_id": "None", "Timestamp": "2026-10-24T11:20:33.550459", "source": "HttpServer", "message_type": "Warning", "request_id": "request-4"}
+{"message": "No price info found for model recursive/flint-v1.0:free in llm info. Token cost defaults to 0.", "user_id": "None", "Timestamp": "2026-10-24T11:20:33.550961", "source": "HttpServer", "message_type": "Warning", "request_id": "request-4"}
+{"message": "Calling class release_readiness.architecture_compliance_tool.ArchitectureComplianceTool", "user_id": "None", "Timestamp": "2026-10-24T11:20:33.557028", "source": "HttpServer", "message_type": "Other", "request_id": "request-4"}
+{"message": "No price info found for model nvidia/nemotron-3.5-super-vl:free in llm info. Token cost defaults to 0.", "user_id": "None", "Timestamp": "2026-10-24T11:20:37.850744", "source": "HttpServer", "message_type": "Warning", "request_id": "request-4"}
+{"message": "No price info found for model nvidia/nemotron-3.5-super-vl:free in llm info. Token cost defaults to 0.", "user_id": "None", "Timestamp": "2026-10-24T11:20:37.851335", "source": "HttpServer", "message_type": "Warning", "request_id": "request-4"}
+{"message": "No price info found for model liquid/lfm-2.5-2.6b:free in llm info. Token cost defaults to 0.", "user_id": "None", "Timestamp": "2026-10-24T11:20:39.576291", "source": "HttpServer", "message_type": "Warning", "request_id": "request-4"}
+{"message": "No price info found for model liquid/lfm-2.5-2.6b:free in llm info. Token cost defaults to 0.", "user_id": "None", "Timestamp": "2026-10-24T11:20:39.576770", "source": "HttpServer", "message_type": "Warning", "request_id": "request-4"}
+{"message": "Calling class release_readiness.secret_scanner_tool.SecretScannerTool", "user_id": "None", "Timestamp": "2026-10-24T11:20:39.582824", "source": "HttpServer", "message_type": "Other", "request_id": "request-4"}
+{"message": "Calling class release_readiness.vulnerability_scanner_tool.VulnerabilityScannerTool", "user_id": "None", "Timestamp": "2026-10-24T11:20:39.601267", "source": "HttpServer", "message_type": "Other", "request_id": "request-4"}
+{"message": "No price info found for model nvidia/nemotron-3.5-lightning:free in llm info. Token cost defaults to 0.", "user_id": "None", "Timestamp": "2026-10-24T11:20:47.593033", "source": "HttpServer", "message_type": "Warning", "request_id": "request-4"}
+{"message": "No price info found for model nvidia/nemotron-3.5-lightning:free in llm info. Token cost defaults to 0.", "user_id": "None", "Timestamp": "2026-10-24T11:20:47.593550", "source": "HttpServer", "message_type": "Warning", "request_id": "request-4"}
+{"message": "No price info found for model cohere/north-mini-code:free in llm info. Token cost defaults to 0.", "user_id": "None", "Timestamp": "2026-10-24T11:20:48.716486", "source": "HttpServer", "message_type": "Warning", "request_id": "request-4"}
+{"message": "No price info found for model cohere/north-mini-code:free in llm info. Token cost defaults to 0.", "user_id": "None", "Timestamp": "2026-10-24T11:20:48.716915", "source": "HttpServer", "message_type": "Warning", "request_id": "request-4"}
+{"message": "No price info found for model nvidia/nemotron-3.5-super-vl:free in llm info. Token cost defaults to 0.", "user_id": "None", "Timestamp": "2026-10-24T11:20:55.289574", "source": "HttpServer", "message_type": "Warning", "request_id": "request-4"}
+{"message": "Request reporting: {
+    "token_accounting": {
+        "total_tokens": 17061,
+        "prompt_tokens": 12549,
+        "completion_tokens": 4512,
+        "successful_requests": 9,
+        "empty_responses": 0,
+        "total_cost": 0.0,
+        "time_taken_in_seconds": 43.9021782875061,
+        "caveats": [
+            "Token usage from agents of the main agent network only. Usage from external agents is not included.",
+            "Token counts are approximate and estimated using tiktoken.",
+            "time_taken_in_seconds includes overhead from Langchain and Neuro SAN"
+        ]
+    },
+    "total_token_accounting": {
+        "total_tokens": 17061,
+        "prompt_tokens": 12549,
+        "completion_tokens": 4512,
+        "successful_requests": 9,
+        "empty_responses": 0,
+        "total_cost": 0.0,
+        "time_taken_in_seconds": 43.9021782875061,
+        "caveats": [
+            "Request total: includes token usage from external agents invoked via direct sessions on this server. Usage from external agents reached over the network is not included.",
+            "Token counts are approximate and estimated using tiktoken.",
+            "time_taken_in_seconds includes overhead from Langchain and Neuro SAN"
+        ],
+        "models": {
+            "ChatOpenRouter": {
+                "nvidia/nemotron-3-ultra-550b-a55b:free": {
+                    "total_tokens": 2194,
+                    "prompt_tokens": 1908,
+                    "completion_tokens": 286,
+                    "successful_requests": 2,
+                    "empty_responses": 0,
+                    "total_cost": 0.0,
+                    "time_taken_in_seconds": 9.700495481491089
+                },
+                "nvidia/nemotron-3.5-super-vl:free": {
+                    "total_tokens": 6173,
+                    "prompt_tokens": 4835,
+                    "completion_tokens": 1338,
+                    "successful_requests": 2,
+                    "empty_responses": 0,
+                    "total_cost": 0.0,
+                    "time_taken_in_seconds": 12.282109022140503
+                },
+                "recursive/flint-v1.0:free": {
+                    "total_tokens": 1353,
+                    "prompt_tokens": 1020,
+                    "completion_tokens": 333,
+                    "successful_requests": 1,
+                    "empty_responses": 0,
+                    "total_cost": 0.0,
+                    "time_taken_in_seconds": 2.58634090423584
+                },
+                "nvidia/nemotron-3.5-lightning:free": {
+                    "total_tokens": 2956,
+                    "prompt_tokens": 1807,
+                    "completion_tokens": 1149,
+                    "successful_requests": 1,
+                    "empty_responses": 0,
+                    "total_cost": 0.0,
+                    "time_taken_in_seconds": 14.02327823638916
+                },
+                "liquid/lfm-2.5-2.6b:free": {
+                    "total_tokens": 1107,
+                    "prompt_tokens": 926,
+                    "completion_tokens": 181,
+                    "successful_requests": 1,
+                    "empty_responses": 0,
+                    "total_cost": 0.0,
+                    "time_taken_in_seconds": 16.80281972885132
+                },
+                "cohere/north-mini-code:free": {
+                    "total_tokens": 3278,
+                    "prompt_tokens": 2053,
+                    "completion_tokens": 1225,
+                    "successful_requests": 2,
+                    "empty_responses": 0,
+                    "total_cost": 0.0,
+                    "time_taken_in_seconds": 14.059321403503418
+                }
+            }
+        }
+    }
+}", "user_id": "None", "Timestamp": "2026-10-24T11:20:55.309876", "source": "HttpServer", "message_type": "Other", "request_id": "request-4"}
+{"message": "Done with release_readiness.StreamingChat request for 'check the PR https://github.com/gokul04/onlinebookstore/pull/1, local repo is checked out at C:\progs\hackathon\code_repo\onlinebookstore'", "user_id": "None", "Timestamp": "2026-10-24T11:20:55.310313", "source": "HttpServer", "message_type": "Other", "request_id": "request-4"}
+{"message": "[0] 200 POST /api/v1/release_readiness/streaming_chat (::1) 46118.66ms", "user_id": "None", "Timestamp": "2026-10-24T11:20:55.311397", "source": "HttpServer", "message_type": "Other", "request_id": "request-4"}
+{"message": "[0] Finish release_readiness/streaming_chat", "user_id": "None", "Timestamp": "2026-10-24T11:20:55.311787", "source": "HttpServer", "message_type": "Other", "request_id": "request-4"}
+{"message": "[0] Stats: {'NumProcessing': 0, 'Total': 4, '/api/v1/list': 1, 'release_readiness/connectivity': 2, 'release_readiness/streaming_chat': 1}", "user_id": "None", "Timestamp": "2026-10-24T11:20:55.311974", "source": "HttpServer", "message_type": "Other", "request_id": "request-4"}

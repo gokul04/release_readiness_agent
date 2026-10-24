@@ -346,3 +346,47 @@ Got result:
     }
 }
 ```
+
+[AGENT] @ 2026-10-24 11:20:30:
+Received arguments:
+```json
+{
+    "tool_args": {
+        "coverage_threshold": null,
+        "origin": [
+            {
+                "instantiation_index": 1,
+                "tool": "release_manager"
+            },
+            {
+                "instantiation_index": 1,
+                "tool": "qa_validator"
+            },
+            {
+                "instantiation_index": 1,
+                "tool": "TestCoverageTool"
+            }
+        ],
+        "origin_str": "release_manager.qa_validator.TestCoverageTool",
+        "repo_path": "C:\\progs\\hackathon\\code_repo\\onlinebookstore"
+    },
+    "tool_start": true
+}
+```
+
+[AGENT] @ 2026-10-24 11:20:32:
+Got result:
+```json
+{
+    "tool_end": true,
+    "tool_error": false,
+    "tool_output": {
+        "coverage_percent": 94.53,
+        "coverage_threshold": 80.0,
+        "meets_threshold": true,
+        "tests_failed": 0,
+        "tests_passed": 91,
+        "tests_skipped": 0
+    }
+}
+```
